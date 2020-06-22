@@ -66,6 +66,7 @@ static const char *downvol[] = { "pulsemixer", "--change-volume", "-5",     NULL
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
 
 static const char *dmenuascii[] = { "bash", ".config/dwm/ascii/main.sh", NULL };
+static const char *screenshot[] = { "screengrab", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -107,6 +108,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F2,    spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_F4,    spawn,          {.v = mutevol } },
 	{ MODKEY,                       XK_e,     spawn,          {.v = dmenuascii } },
+	//screenshot with screengrab
+	{ MODKEY,                       XK_F1,    spawn,          {.v = screenshot } },
 };
 
 /* button definitions */

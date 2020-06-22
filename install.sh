@@ -2,5 +2,5 @@
 
 make
 sudo make install
-mkdir ~/.config/dwm
+mkdir -p ~/.config/dwm
 cp -r -p config/* ~/.config/dwm
