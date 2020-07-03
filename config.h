@@ -67,6 +67,7 @@ static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
 
 static const char *dmenuascii[] = { "bash", ".config/dwm/ascii/main.sh", NULL };
 static const char *screenshot[] = { "screengrab", NULL };
+static const char *emacs[] = { "emacs", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -110,6 +111,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_e,     spawn,          {.v = dmenuascii } },
 	//screenshot with screengrab
 	{ MODKEY,                       XK_F1,    spawn,          {.v = screenshot } },
+	//start emacs
+	{ MODKEY,                       XK_z ,    spawn,          {.v = emacs } },
 };
 
 /* button definitions */
