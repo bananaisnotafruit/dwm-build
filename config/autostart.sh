@@ -1,6 +1,7 @@
 #!/bin/bash
 
-nitrogen --restore &
+# nitrogen --restore &
+feh -bg-scale .desktop.jpg
 
 xset r rate 300 50
 xinput set-prop 12 298 -1
