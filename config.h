@@ -15,14 +15,17 @@ static const char col_cyan[]        = "#005577";
 static const char col_orange[]      = "#F29F05";
 static const char col_blue[]        = "#1455D9";
 
-static const char col_bg[]  = "#5C6B72";
-static const char col_brd[] = "#EBE7E4";
-static const char col_bar[] = "#EBE7E4";
+
+static const char col_bg[]  = "#FFB135"; //the color of the highlighted tags and titlebar
+static const char col_brd[] = "#FFD65A"; // also changes color of the window borders
+static const char col_bar[] = "#000000"; // changes color of the selected tag text
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2   },
-	[SchemeSel]  = { col_brd, col_bg,    col_bar  },
+	//[SchemeNorm] = { col_gray3, col_gray1, col_gray2   },
+	[SchemeNorm] = { "#FFB135", col_gray1, col_gray2   },
+	//^^^^^^       text in tag, bg, border
+	[SchemeSel]  = { col_bar, col_bg,    col_brd  },
 };
 
 /* tagging */
@@ -113,6 +116,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F3,    spawn,          {.v = upvol   } },
 	{ MODKEY,                       XK_F2,    spawn,          {.v = downvol } },
 	{ MODKEY,                       XK_F4,    spawn,          {.v = mutevol } },
+
 	{ MODKEY,                       XK_e,     spawn,          {.v = dmenuascii } },
 	//screenshot with screengrab
 	{ MODKEY,                       XK_F1,    spawn,          {.v = screenshot } },
