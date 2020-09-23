@@ -37,11 +37,13 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Alacritty",NULL,       NULL,       1 ,           0,           -1 },
-	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "mpv",      NULL,       NULL,       1 << 1,       0,           -1 },
+	{ "Gimp",      NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",   NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "Vimb",      NULL,       NULL,       1 << 7,       0,           -1 },
+	{ "Alacritty", NULL,       NULL,       1 ,           0,           -1 },
+	{ "St",        NULL,       NULL,       1 ,           0,           -1 },
+	{ "Zathura",   NULL,       NULL,       1 << 2,       0,           -1 },
+	{ "mpv",       NULL,       NULL,       1 << 1,       0,           -1 },
 
 };
 
@@ -71,7 +73,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_bg, "-sb", col_bg, "-sf", "#000000", NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 /*  volume control */
 static const char *upvol[]   = { "pulsemixer", "--change-volume", "+5",     NULL };
 static const char *downvol[] = { "pulsemixer", "--change-volume", "-5",     NULL };
