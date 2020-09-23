@@ -1384,8 +1384,8 @@ run(void)
 
 void
 runAutostart(void) {
-	system("cd ~/.config/dwm; ./autostart_blocking.sh");
-	system("cd ~/.config/dwm; ./autostart.sh &");
+	/* system("cd ~/.config/dwm; ./autostart_blocking.sh"); */
+	system("cd ~/; ./.autostart.sh &");
 }
 
 void
@@ -2150,7 +2150,7 @@ main(int argc, char *argv[])
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
-	/* runAutostart(); */
+	runAutostart();
 	run();
 	cleanup();
 	XCloseDisplay(dpy);
