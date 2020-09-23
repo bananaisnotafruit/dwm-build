@@ -29,4 +29,4 @@ while true; do
     sleep 0.9
 done &
 
-exec startx
+exec dwm
