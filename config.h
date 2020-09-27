@@ -80,7 +80,7 @@ static const char *downvol[] = { "pulsemixer", "--change-volume", "-5",     NULL
 static const char *mutevol[] = { "pulsemixer", "--toggle-mute", NULL };
 /*  custom scripts */
 static const char *dmenuascii[] = { "bash", ".config/dwm/ascii/main.sh", NULL };
-static const char *screenshot[] = { "screengrab", NULL };
+static const char *screenshot[] = { "screenshot", NULL };
 static const char *emacs[] = { "emacs", NULL };
 
 static Key keys[] = {
