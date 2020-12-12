@@ -24,4 +24,4 @@ maths="⅀~ double summation\n⇒~ implies\n⇔~ equivalent\n⇏~ not implies\n�
 #U+227x 	≰ 	≱ 	≲ 	≳ 	≴ 	≵ 	≶ 	≷ 	≸ 	≹ 	≺ 	≻ 	≼ 	≽ 	≾ 	≿
 #U+228x 	⊀ 	⊁ 	⊂ 	⊃ 	⊄ 	⊅ 	⊆ 	⊇ 	⊈ 	⊉ 	⊊ 	⊋ 	⊌ 	⊍ 	⊎ 	⊏"
 
-echo -e $emoji $misc $chem $maths | dmenu | awk -F"~" '{print $1}' | xclip -selection clipboard 
+echo -e $emoji $misc $chem $maths | dmenu | awk -F"~" '{print $1}' | tr -d '\n' |  xclip -selection clipboard 
